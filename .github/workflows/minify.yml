@@ -21,7 +21,6 @@ jobs:
         with:
           commit_message: "Github Action: Auto Minified JS and CSS files"
           branch: live
-          push_options: --force
           file_pattern: CSS/**.min.css
   remove-min-suffix:
     needs: minify-css
@@ -38,4 +37,3 @@ jobs:
       with:
         commit_message: "Removed .min from filename"
         branch: 'live'
-        push_options: --force

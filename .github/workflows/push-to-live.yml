@@ -10,11 +10,15 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so auto-minify job can access it
       - uses: actions/checkout@v2
         with:
-          token: ${{ secrets.PAT }}
-
-      - name: Commit new files
-        uses: stefanzweifel/git-auto-commit-action@master
+          persist-credentials: false
+          fetch-depth: 0 
+      - name: Commit files
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "Add changes" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
         with:
-          commit_message: "Github Action: Auto Commit"
+          github_token: ${{ secrets.PAT }}
           branch: live
-          push_options: '--force'
