@@ -1,6 +1,8 @@
-name: Minifying CSS
+name: Minify CSS
 on:
   push:
+    paths:
+      - 'CSS/**.css'
     branches:
       - main
 jobs:
@@ -20,6 +22,7 @@ jobs:
           commit_message: "Github Action: Auto Minified JS and CSS files"
           branch: live
           push_options: --force
+          file_pattern: CSS/**.min.css
   remove-min-suffix:
     needs: minify-css
     runs-on: ubuntu-latest
