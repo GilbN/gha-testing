@@ -3,7 +3,7 @@ name: Minifying CSS
 on:
   push:
     paths:
-      - "CSS/**base.css"
+      - 'CSS/**base.css'
     branches:
       - main
 
@@ -11,19 +11,19 @@ jobs:
   checkout:
     runs-on: ubuntu-latest
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so auto-minify job can access it
-      - uses: actions/checkout@v2
+  # Checks-out your repository under $GITHUB_WORKSPACE, so auto-minify job can access it
+    - uses: actions/checkout@v2
 
-      - name: Auto Minify
-        uses: nizarmah/auto-minify@master
-        with:
-          directory: "CSS"
+    - name: Auto Minify
+      uses: nizarmah/auto-minify@master
+      with:
+        directory: 'CSS'
 
-      # Auto commits minified files to the repository
-      # Ignore it if you don't want to commit the files to the repository
-      - name: Auto committing minified files
-      - uses: stefanzweifel/git-auto-commit-action
-        with:
-          repository: "CSS"
-          commit_message: "Github Action: Auto Minified JS and CSS files"
-          branch: live
+    # Auto commits minified files to the repository
+    # Ignore it if you don't want to commit the files to the repository 
+    - name: Auto committing minified files
+      uses: stefanzweifel/git-auto-commit-action
+      with:
+        repository: 'CSS'
+        commit_message: "Github Action: Auto Minified JS and CSS files"
+        branch: ${{ github.ref }}
