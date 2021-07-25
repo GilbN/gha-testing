@@ -18,3 +18,4 @@ jobs:
         with:
           commit_message: "Github Action: Auto Commit"
           branch: live
+          push_options: '--force'
