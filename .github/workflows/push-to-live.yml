@@ -18,6 +18,7 @@ jobs:
         with:
           publish_dir: ./
           publish_branch: live
+          github_token: ${{ secrets.GITHUB_TOKEN }}
   minify-css:
     runs-on: ubuntu-latest
     steps:
