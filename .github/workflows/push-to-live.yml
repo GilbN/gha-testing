@@ -20,3 +20,4 @@ jobs:
         with:
           github_token: ${{ secrets.PAT }}
           publish_dir: ./
+          publish_branch: live
