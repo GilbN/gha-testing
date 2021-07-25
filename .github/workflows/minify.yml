@@ -3,7 +3,7 @@ name: Minifying CSS
 on:
   push:
     paths:
-      - 'CSS/**base.css'
+      - 'CSS/**.css'
     branches:
       - main
 
