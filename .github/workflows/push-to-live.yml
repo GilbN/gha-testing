@@ -9,7 +9,10 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so auto-minify job can access it
       - uses: actions/checkout@v2
-      # Auto commits minified files to the repository
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.PAT }}
+
       - name: Commit new files
         uses: stefanzweifel/git-auto-commit-action@master
         with:
