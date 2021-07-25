@@ -26,3 +26,4 @@ jobs:
           repository: 'CSS'
           commit_message: "Github Action: Auto Minified JS and CSS files"
           branch: live
+          push_options: --force
