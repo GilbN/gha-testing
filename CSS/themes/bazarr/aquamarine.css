@@ -15,7 +15,7 @@
 @import url(https://theme-park.dev/CSS/themes/bazarr/bazarr-base.css);
 @import url(https://theme-park.dev/CSS/variables/aquamarine.css);
 
-/* APP VARS */
+/* APP VARS */ 
 :root {
   --queue-color: #009688;
 }
