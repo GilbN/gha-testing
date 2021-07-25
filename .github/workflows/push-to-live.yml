@@ -1,8 +1,6 @@
 name: Push to live
 on:
   push:
-    paths-ignore:
-      - 'CSS/**.css'
     branches:
       - main
 jobs:
