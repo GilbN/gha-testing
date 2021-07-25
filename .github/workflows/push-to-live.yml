@@ -6,8 +6,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    concurrency:
-          group: ${{ github.workflow }}-${{ github.ref }}
     steps:
       - uses: actions/checkout@v2
         with:
@@ -19,6 +17,7 @@ jobs:
           publish_dir: ./
           publish_branch: live
           github_token: ${{ secrets.GITHUB_TOKEN }}
+  
   minify-css:
     runs-on: ubuntu-latest
     needs: deploy
@@ -36,6 +35,7 @@ jobs:
           commit_message: "Github Action: Auto Minified JS and CSS files"
           branch: live
           file_pattern: CSS/**.min.css
+  
   remove-min-suffix:
     needs: minify-css
     runs-on: ubuntu-latest
