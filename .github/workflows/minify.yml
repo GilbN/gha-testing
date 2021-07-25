@@ -23,4 +23,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v3.0.0
         with:
           commit_message: "Github Action: Auto Minified JS and CSS files"
-          branch: ${{ github.ref }}
+          branch: live
