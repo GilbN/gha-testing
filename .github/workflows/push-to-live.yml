@@ -4,17 +4,16 @@ on:
     branches:
       - main
 jobs:
-  push-to-live:
-    runs-on: ubuntu-latest
+  deploy:
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest    
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so auto-minify job can access it
-      - uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.PAT }}
-          fetch-depth: 0
+    - uses: actions/checkout@master
 
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.PAT }}
-          branch: 'live'
+    - name: Deploy
+      uses: s0/git-publish-subdir-action@develop
+      env:
+        REPO: self
+        BRANCH: gh-pages
+        FOLDER: .
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
