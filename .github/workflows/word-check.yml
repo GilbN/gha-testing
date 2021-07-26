@@ -8,21 +8,24 @@ jobs:
   yo_fuck_stick:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 2 
-    - run: |
-        ls -la
-        DIFF=$(git diff --color=always|perl -wlne 'print $1 if /^\e\[32m\+\e\[m\e\[32m(.*)\e\[m$/')
-        echo "hello"
-        echo "$DIFF"
-        echo "yo"
-        case "$DIFF" in 
-          *dev.theme-park.dev*)
-          echo "FUCK....ASS"
-          echo '::set-output name=BITCH_PLEASE::true' 
-            ;;
-        esac
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: get a diffy boy
+        id: slapAss
+        run: |
+          ls -la
+          DIFF=$(git diff --color=always|perl -wlne 'print $1 if /^\e\[32m\+\e\[m\e\[32m(.*)\e\[m$/')
+          echo "hello"
+          echo "$DIFF"
+          echo "yo"
+          case "$DIFF" in 
+            *dev.theme-park.dev*)
+            echo "FUCK....ASS"
+            echo '::set-output name=BITCH_PLEASE::true' 
+              ;;
+          esac
     - name: cancelling
-      if: steps.slapAss.outputs.BITCH_PLEASE=='true'
+      if: ${{ steps.slapAss.outputs.BITCH_PLEASE}} =='true'
       uses: andymckay/cancel-action@0.2
