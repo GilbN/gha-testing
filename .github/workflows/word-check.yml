@@ -26,5 +26,5 @@ jobs:
               ;;
           esac
       - name: cancelling
-        if: ${{ steps.slapAss.outputs.BITCH_PLEASE}} == 'true'
+        if: steps.slapAss.outputs.BITCH_PLEASE=='true'
         uses: andymckay/cancel-action@0.2
