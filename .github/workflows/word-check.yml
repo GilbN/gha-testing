@@ -11,9 +11,9 @@ jobs:
     - name: get code
       uses: actions/checkout@v2
     - name: Check PR
-      uses: JJ/github-pr-contains-action@releases/v0
+      uses: JJ/github-pr-contains-action@releases/v1
       with:
-        github-token: ${{github.token}}
+        github-token: ${{ secrets.GITHUB_TOKEN }}
         bodyDoesNotContain: "Delete this"
         bodyContains: 'Test'
         diffContains: 'Test'
