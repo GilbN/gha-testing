@@ -12,6 +12,7 @@ jobs:
       with:
         fetch-depth: 2 
     - run: |
+        ls -la
         DIFF=$(git diff --color=always|perl -wlne 'print $1 if /^\e\[32m\+\e\[m\e\[32m(.*)\e\[m$/')
         echo "hello"
         echo "$DIFF"
