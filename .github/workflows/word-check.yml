@@ -11,6 +11,7 @@ jobs:
     - name: dev.theme-park.dev
       id: slapAss
       uses: actions/checkout@v2
+    - name: get output
       run: |
         OUTPUT=$(git diff -G ".*dev\.theme-park\.dev.*")
         if [ -z "${OUTPUT}" ]; then
