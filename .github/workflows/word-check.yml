@@ -15,8 +15,8 @@ jobs:
       - name: get a diffy boy
         id: slapAss
         run: |
-          git diff
-          DIFF=$(git diff --color=always ${{ github.sha }}|perl -wlne 'print $1 if /^\e\[32m\+\e\[m\e\[32m(.*)\e\[m$/')
+          git diff origin/main origin/${GITHUB_HEAD_REF}
+          DIFF=$(git diff --color=always origin/main origin/${GITHUB_HEAD_REF}|perl -wlne 'print $1 if /^\e\[32m\+\e\[m\e\[32m(.*)\e\[m$/')
           echo "hello"
           echo ${DIFF}
           echo "yo"
