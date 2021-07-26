@@ -2,7 +2,7 @@ name: Push to live
 on:
   push:
     branches:
-      - main
+      - nope
 jobs:
   deploy:
     runs-on: ubuntu-latest
