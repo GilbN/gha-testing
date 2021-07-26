@@ -5,13 +5,11 @@ on:
       - main
 
 jobs:
-  check_commit:
+  check_pr:
     runs-on: ubuntu-latest
     steps:
-    - name: Check commit
-      uses: JJ/github-pr-contains-action@releases/v2
+    - name: Check for @nocommit
+      uses: itsvs/no-merge-action@releases/v0.3
       with:
         github-token: ${{github.token}}
-        bodyContains: ''
-        bodyDoesNotContain: 'Delete this'
-        diffContains: ''
+        keyword: "dev.theme-park.dev"
