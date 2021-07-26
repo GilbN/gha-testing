@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Check commit
-      uses: JJ/github-pr-contains-action@releases/v1
+      uses: JJ/github-pr-contains-action@releases/v0
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         bodyDoesNotContain: "dev.theme-park.dev"
