@@ -16,7 +16,7 @@ jobs:
         id: slapAss
         run: |
           echo "$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }})"
-          DIFF=$(git diff --color=always HEAD HEAD^|perl -wlne 'print $1 if /^\e\[32m\+\e\[m\e\[32m(.*)\e\[m$/')
+          DIFF=$(git diff --color=always HEAD^ ${{ github.sha }}|perl -wlne 'print $1 if /^\e\[32m\+\e\[m\e\[32m(.*)\e\[m$/')
           echo "hello"
           echo ${DIFF}
           echo "yo"
