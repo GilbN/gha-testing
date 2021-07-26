@@ -13,7 +13,9 @@ jobs:
         fetch-depth: 2 
     - run: |
         DIFF=$(git diff --color=always|perl -wlne 'print $1 if /^\e\[32m\+\e\[m\e\[32m(.*)\e\[m$/')
+        echo "hello"
         echo "$DIFF"
+        echo "yo"
         case "$DIFF" in 
           *dev.theme-park.dev*)
           echo "FUCK....ASS"
