@@ -5,16 +5,18 @@ on:
       - main
 
 jobs:
-  check_pr:
+  yo_fuck_stick:
     runs-on: ubuntu-latest
     steps:
-    - name: get code asdas das asd asd
+    - name: dev.theme-park.dev
+    id: slapAss
       uses: actions/checkout@v2
-    - name: Check PR
-      uses: JJ/github-pr-contains-action@releases/v1
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        bodyContains: "Delete this"
-        diffContains: 'Test'
-        filesChanged: 1
-        linesChanged: 1
+      run: |
+        OUTPUT=$(git diff -G ".*dev\.theme-park\.dev.*")
+        if [ -z "${OUTPUT}" ]; then
+          echo "FUCK....ASS"
+          echo '::set-output name=BITCH_PLEASE::true'
+        fi
+      if: steps.slapAss.outputs.BITCH_PLEASE==true
+      - name: cancelling
+      uses: andymckay/cancel-action@0.2
