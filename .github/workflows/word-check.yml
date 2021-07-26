@@ -10,8 +10,12 @@ jobs:
     steps:
     - name: get code
       uses: actions/checkout@v2
-    - name: Check for @nocommit
-      uses: itsvs/no-merge-action@releases/v0.3
+    - name: Check PR
+      uses: JJ/github-pr-contains-action@releases/v0
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        keyword: "dev.theme-park.dev"
+        github-token: ${{github.token}}
+        bodyDoesNotContain: "Delete this"
+        bodyContains: 'Test'
+        diffContains: 'Test'
+        filesChanged: 1
+        linesChanged: 1
