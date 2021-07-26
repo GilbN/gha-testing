@@ -8,7 +8,7 @@ jobs:
   check_pr:
     runs-on: ubuntu-latest
     steps:
-    - name: get code
+    - name: get code asdas das asd asd
       uses: actions/checkout@v2
     - name: Check PR
       uses: JJ/github-pr-contains-action@releases/v1
