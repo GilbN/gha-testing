@@ -18,14 +18,14 @@ jobs:
           ls -la
           DIFF=$(git diff --color=always|perl -wlne 'print $1 if /^\e\[32m\+\e\[m\e\[32m(.*)\e\[m$/')
           echo "hello"
-          echo "$DIFF"
+          echo ${DIFF}
           echo "yo"
-          case "$DIFF" in 
+          case ${DIFF} in 
             *dev.theme-park.dev*)
             echo "FUCK....ASS"
             echo '::set-output name=BITCH_PLEASE::true' 
               ;;
           esac
       - name: cancelling
-        if: ${{ steps.slapAss.outputs.BITCH_PLEASE}} =='true'
+        if: ${{ steps.slapAss.outputs.BITCH_PLEASE}} == 'true'
         uses: andymckay/cancel-action@0.2
