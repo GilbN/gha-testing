@@ -21,7 +21,7 @@ jobs:
           echo ${DIFF}
           echo "yo"
           case ${DIFF} in 
-            *dev.theme-park.dev*)
+            *"dev.theme-park.dev"*)
             echo "FUCK....ASS"
             echo '::set-output name=BITCH_PLEASE::true' 
               ;;
