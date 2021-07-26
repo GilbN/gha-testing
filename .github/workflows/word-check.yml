@@ -11,7 +11,7 @@ jobs:
     - name: Check commit
       uses: JJ/github-pr-contains-action@releases/v2
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+        github-token: ${{github.token}}
         bodyContains: ''
         bodyDoesNotContain: 'Delete this'
         diffContains: ''
