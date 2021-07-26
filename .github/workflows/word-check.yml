@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: dev.theme-park.dev
-    id: slapAss
+      id: slapAss
       uses: actions/checkout@v2
       run: |
         OUTPUT=$(git diff -G ".*dev\.theme-park\.dev.*")
