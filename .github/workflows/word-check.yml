@@ -1,0 +1,15 @@
+name: "Check commit for word"
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  check_commit:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check commit
+      uses: JJ/github-pr-contains-action@master
+      with:
+        github-token: ${{github.token}}
+        bodyDoesNotContain: "dev.theme-park.dev"
