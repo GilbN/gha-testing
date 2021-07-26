@@ -11,6 +11,7 @@ jobs:
     - name: dev.theme-park.dev
       id: slapAss
     - uses: actions/checkout@v2
+      with:
         fetch-depth: 2 
     - run: |
         DIFF=$(git diff --color=always|perl -wlne 'print $1 if /^\e\[32m\+\e\[m\e\[32m(.*)\e\[m$/')
