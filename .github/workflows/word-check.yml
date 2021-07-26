@@ -11,5 +11,5 @@ jobs:
     - name: Check commit
       uses: JJ/github-pr-contains-action@releases/v1
       with:
-        github-token: ${{github.token}}
+        github-token: ${{ secrets.GITHUB_TOKEN }}
         bodyDoesNotContain: "dev.theme-park.dev"
