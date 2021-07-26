@@ -8,6 +8,8 @@ jobs:
   check_pr:
     runs-on: ubuntu-latest
     steps:
+    - name: get code
+      uses: actions/checkout@v2
     - name: Check for @nocommit
       uses: itsvs/no-merge-action@releases/v0.3
       with:
