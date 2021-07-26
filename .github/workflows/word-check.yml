@@ -26,6 +26,6 @@ jobs:
             echo '::set-output name=BITCH_PLEASE::true' 
               ;;
           esac
-    - name: cancelling
-      if: ${{ steps.slapAss.outputs.BITCH_PLEASE}} =='true'
-      uses: andymckay/cancel-action@0.2
+      - name: cancelling
+        if: ${{ steps.slapAss.outputs.BITCH_PLEASE}} =='true'
+        uses: andymckay/cancel-action@0.2
