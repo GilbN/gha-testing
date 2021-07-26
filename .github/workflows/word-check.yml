@@ -6,7 +6,7 @@ on:
 
 jobs:
   yo_fuck_stick:
-    runs-on: ubuntu-latestsssss
+    runs-on: ubuntu-latest
     steps:
       - name: checkout
         uses: actions/checkout@v2
