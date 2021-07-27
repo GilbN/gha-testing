@@ -16,5 +16,6 @@ jobs:
         id: good_commit
         run: |
           if git grep dev.theme-park.dev -- *.css; then
-            exit 0
+            echo "Game over man!"
+            exit 1
           fi
