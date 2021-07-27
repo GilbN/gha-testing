@@ -1,0 +1,20 @@
+name: "Check commit for word"
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  yo_fuck_stick:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Look for dev domain
+        id: good_commit
+        run: |
+          if git grep dev.theme-park.dev -- *.css; then
+            exit 0
+          fi
