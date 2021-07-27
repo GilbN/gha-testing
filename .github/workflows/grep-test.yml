@@ -12,10 +12,10 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Look for dev domain
-        id: good_commit
+      - name: Wrong domain check
         run: |
-          if git grep dev.theme-park.dev -- *.css; then
+          echo "$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }})"
+          if git grep -q -E ${{ secrets.DOMAIN }} -- *.css; then
             echo "Game over man!"
             exit 1
           fi
