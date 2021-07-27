@@ -1,11 +1,11 @@
-name: "Check commit for word"
+name: "grep for word"
 on:
   push:
     branches:
       - main
 
 jobs:
-  yo_fuck_stick:
+  grep:
     runs-on: ubuntu-latest
     steps:
       - name: checkout

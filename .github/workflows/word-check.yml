@@ -2,7 +2,7 @@ name: "Check commit for word"
 on:
   push:
     branches:
-      - main
+      - sdfsdfdd
 
 jobs:
   yo_fuck_stick:
