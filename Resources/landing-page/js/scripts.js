@@ -1,72 +1,20 @@
-/*!
-* Start Bootstrap - Creative v6.0.5 (https://startbootstrap.com/theme/creative)
-* Copyright 2013-2021 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-creative/blob/master/LICENSE)
-*/
-(function ($) {
-    "use strict"; // Start of use strict
-
-    // Smooth scrolling using anime.js
-    $('a.js-scroll-trigger[href*="#"]:not([href="#"])').on('click', function () {
-        if (
-            location.pathname.replace(/^\//, "") ==
-            this.pathname.replace(/^\//, "") &&
-            location.hostname == this.hostname
-        ) {
-            var target = $(this.hash);
-            target = target.length ?
-                target :
-                $("[name=" + this.hash.slice(1) + "]");
-            if (target.length) {
-                anime({
-                    targets: 'html, body',
-                    scrollTop: target.offset().top - 72,
-                    duration: 1000,
-                    easing: 'easeInOutExpo'
-                });
-                return false;
-            }
-        }
-    });
-
-    // Closes responsive menu when a scroll trigger link is clicked
-    $('.js-scroll-trigger').click(function () {
-        $('.navbar-collapse').collapse('hide');
-    });
-
-    // Activate scrollspy to add active class to navbar items on scroll
-    $('body').scrollspy({
-        target: '#mainNav',
-        offset: 75
-    });
-
-    // Collapse Navbar
-    var navbarCollapse = function () {
-        if ($("#mainNav").offset().top > 100) {
-            $("#mainNav").addClass("navbar-scrolled");
-        } else {
-            $("#mainNav").removeClass("navbar-scrolled");
-        }
-    };
-    // Collapse now if page is not at top
-    navbarCollapse();
-    // Collapse the navbar when page is scrolled
-    $(window).scroll(navbarCollapse);
-
-    // Magnific popup calls
-    $('#portfolio').magnificPopup({
-        delegate: 'a',
-        type: 'image',
-        tLoading: 'Loading image #%curr%...',
-        mainClass: 'mfp-img-mobile',
-        gallery: {
-            enabled: true,
-            navigateByImgClick: true,
-            preload: [0, 1]
-        },
-        image: {
-            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
-        }
-    });
-
-})(jQuery); // End of use strict
+Error: Cannot find module 'fs/promises'
+Require stack:
+- /usr/local/lib/node_modules/minify/lib/minify.js
+- /usr/local/lib/node_modules/minify/bin/minify.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:815:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:667:27)
+    at Module.require (internal/modules/cjs/loader.js:887:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (/usr/local/lib/node_modules/minify/lib/minify.js:5:20)
+    at Module._compile (internal/modules/cjs/loader.js:999:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1027:10)
+    at Module.load (internal/modules/cjs/loader.js:863:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:708:14)
+    at Module.require (internal/modules/cjs/loader.js:887:19) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/usr/local/lib/node_modules/minify/lib/minify.js',
+    '/usr/local/lib/node_modules/minify/bin/minify.js'
+  ]
+}
