@@ -2,7 +2,7 @@ name: "grep for word"
 on:
   push:
     branches:
-      - main
+      - dfgdfgdfg
 
 jobs:
   grep:
