@@ -1,31 +1,30 @@
-name: "Check commit for word"
+name: Minify CSS and deploy to live branch
 on:
   push:
     branches:
-      - sdfsdfdd
-
+      - master
 jobs:
-  yo_fuck_stick:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: get a diffy boy
-        id: slapAss
-        run: |
-          echo "$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }})"
-          DIFF=$(git diff --color=always HEAD^ ${{ github.sha }}|perl -wlne 'print $1 if /^\e\[32m\+\e\[m\e\[32m(.*)\e\[m$/')
-          echo "hello"
-          echo ${DIFF}
-          echo "yo"
-          case ${DIFF} in 
-            *"dev.theme-park.dev"*)
-            echo "FUCK....ASS"
-            echo '::set-output name=BITCH_PLEASE::true' 
-              ;;
-          esac
-      - name: cancelling
-        if: steps.slapAss.outputs.BITCH_PLEASE=='true'
-        uses: andymckay/cancel-action@0.2
+
+      - uses: actions/checkout@v2
+
+      - name: Auto Minify
+        uses: nizarmah/auto-minify@master
+        with:
+          js_engine: uglify-js
+
+      - name: Remove .min suffix from minified files
+        run: find ./CSS -depth -name "*.min.*" -exec sh -c 'mv "$1" "${1%.*.*}.${1##*.}"' _ {} \;
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/master' }}
+        with:
+          publish_dir: ./
+          publish_branch: live
+          github_token: ${{ secrets.GITHUB_TOKEN }}
