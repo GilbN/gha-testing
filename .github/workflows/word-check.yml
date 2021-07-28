@@ -15,9 +15,9 @@ jobs:
 
       - name: Minify-JS Action
         run: |
-          npm install -g minify
-          apt-get update
-          apt-get -y install moreutils
+          sudo npm install -g minify
+          sudo apt-get update
+          sudo apt-get -y install moreutils
 
           minify_file(){
               directory=$1
