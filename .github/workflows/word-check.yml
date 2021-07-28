@@ -31,7 +31,7 @@ jobs:
               echo "Minified ${directory} > ${output_path}"
           }
           
-            find . -type f \( -iname \*.html -o -iname \*.js -o -iname \*.css \) | while read fname
+            find . -type f \( -iname \*.html -o -iname \*.js -o -iname \*base.css \) | while read fname
                 do
                     if [[ "$fname" != *"min."* ]]; then
                         minify_file $fname
