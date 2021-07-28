@@ -13,7 +13,7 @@ jobs:
 
       - uses: actions/checkout@v2
 
-      - name: Minify-JS Action
+      - name: Minify CSS
         run: |
           sudo npm install -g minify
           sudo apt-get update
@@ -24,22 +24,18 @@ jobs:
               basename=$(basename $directory);
               extension="${basename##*.}"
               output="${directory%/*}/"
-
               filename="${basename%.*}"
               output_path="${output}${filename}.${extension}"
               minify ${directory} | sponge ${output_path}
               echo "Minified ${directory} > ${output_path}"
           }
           
-            find . -type f \( -iname \*.html -o -iname \*.js -o -iname \*base.css \) | while read fname
+            find ./CSS -type f -iname *base.css | while read fname
                 do
                     if [[ "$fname" != *"min."* ]]; then
                         minify_file $fname
                     fi
                 done
-
-      - name: Remove .min suffix from minified files
-        run: find ./CSS -depth -name "*.min.*" -exec sh -c 'mv "$1" "${1%.*.*}.${1##*.}"' _ {} \;
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
