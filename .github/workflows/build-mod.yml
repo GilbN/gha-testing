@@ -2,7 +2,7 @@ name: autobuildallthemods
 on:
   push:
     branches: 
-      - master
+      - main
     paths:
     - 'docker-mods/**'
 jobs:
