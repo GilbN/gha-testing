@@ -21,7 +21,7 @@ jobs:
         run: |
           for i in ${{ steps.getfile.outputs.files }}
             do
-              directory="$( echo $i | cut -d'/' -f1 -s )"
+              directory="$( echo $i | cut -d'/' -f2 -s )"
               echo "$directory"
               if [ -z "$directory" ]; then
                 continue # Skip root dir
@@ -30,4 +30,5 @@ jobs:
               elif [ "$i" == *.yml ]; then
                 continue # Skip YAML files
               fi
+              cat docker-mods/$directory/Dockerfile
             done
