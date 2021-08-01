@@ -2,7 +2,7 @@ name: Minify CSS and deploy to live branch
 on:
   push:
     branches:
-      - main
+      - asdasdasd
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -11,9 +11,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: actions/checkout@v2
-
-      - name: Minify CSS
+      - name: Minify *-base.css CSS
         run: |
           sudo npm install -g minify
           sudo apt-get update
