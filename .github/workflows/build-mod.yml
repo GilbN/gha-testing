@@ -17,12 +17,6 @@ jobs:
         id: getfile
         run: |
           echo "::set-output name=files::$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }}| xargs)"
-      - name: Login to GitHub Container Registry
-        uses: docker/login-action@v1
-        with:
-          registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.GH_PAT }}
       - name: find correct directory then build&push
         run: |
           for i in ${{ steps.getfile.outputs.files }}
