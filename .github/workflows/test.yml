@@ -4,7 +4,7 @@ on:
     branches:
       - main
 
- jobs:
+jobs:
   semver:
     runs-on: ubuntu-latest
     steps:
