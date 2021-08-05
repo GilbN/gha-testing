@@ -5,7 +5,7 @@ on:
       - main
       
  jobs:
-   semver:
+  semver:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
