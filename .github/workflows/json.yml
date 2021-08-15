@@ -8,25 +8,19 @@ on:
         - '.github/**'
         - '.vscode/**'
 jobs:
-  create_json:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
-        with:
-          python-version: ${{ matrix.python-version }}
-      - name: Get short SHA and create JSON
-        run: |
-          GIT_HASH=$(git rev-parse --short "$GITHUB_SHA")
-          python themes.py --sha=${GIT_HASH}
-          ls
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+      - name: Get short SHA and create JSON
+        run: |
+          GIT_HASH=$(git rev-parse --short "$GITHUB_SHA")
+          python themes.py --sha=${GIT_HASH}
+          ls
       - name: Wrong domain check
         run: |
           echo "$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }})"
