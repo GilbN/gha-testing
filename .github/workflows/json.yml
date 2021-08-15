@@ -1,0 +1,25 @@
+name: Minify CSS and deploy to live branch
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+        - 'docker-mods/**'
+        - '.github/**'
+        - '.vscode/**'
+jobs:
+  create_json:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Get short SHA
+        run: |
+          git_hash=$(git rev-parse --short "$GITHUB_SHA")
+      - name: Create JSON file
+        run: python themes.py --sha="${git_hash}"
