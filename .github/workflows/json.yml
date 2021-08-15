@@ -34,7 +34,6 @@ jobs:
           echo "$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }})"
           if git grep -q -E ${{ secrets.DOMAIN }} -- *.css; then
             echo "Game over man!"
-            exit 1
           fi
       - name: Minify CSS
         run: |
