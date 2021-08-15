@@ -12,17 +12,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Get short SHA
+      - name: Get short SHA and create JSON
         run: |
-          git_hash=$(git rev-parse --short "$GITHUB_SHA")
-      - name: Create JSON file
-        run: python themes.py --sha="${git_hash}"
+          GIT_HASH=$(git rev-parse --short "$GITHUB_SHA")
+          python themes.py --sha=${GIT_HASH}
+          ls
   deploy:
     runs-on: ubuntu-latest
     steps:
