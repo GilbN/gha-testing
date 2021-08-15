@@ -2,7 +2,7 @@ name: Minify CSS and deploy to live branch
 on:
   push:
     branches:
-      - master
+      - main
     paths-ignore:
         - 'docker-mods/**'
         - '.github/**'
