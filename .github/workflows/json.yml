@@ -27,10 +27,14 @@ jobs:
           python themes.py
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add .
-          git commit -m "themes.json"
-          git push
-          exit 0
+          status=$(git status --porcelain=v1 2>/dev/null | wc -l)
+          if [[ "$status" -eq 2 ]]; then
+            git add .
+            git commit -m "themes.json"
+            git push
+          else
+            echo "No Change to themes.json"
+          fi
       - name: Minify CSS
         run: |
           sudo npm install -g minify
