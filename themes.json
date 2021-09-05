@@ -44,7 +44,7 @@
       "addons": {
         "bazarr-4k-logo": {
           "css": [
-            "https://testing.theme-park.dev/CSS/addons/bazarr/bazarr-4k-logo/bazarr-4k-logo.css?sha=f22f1d36d3fbcd79d8f8adce7695eabf3f6ae86a"
+            "https://testing.theme-park.dev/CSS/addons/bazarr/bazarr-4k-logo/bazarr-4k-logo.css?sha=6c741d7f067a53b418200965e9ff941671ed8aeb"
           ]
         }
       }
@@ -187,7 +187,7 @@
       "addons": {
         "radarr-4k-logo": {
           "css": [
-            "https://testing.theme-park.dev/CSS/addons/radarr/radarr-4k-logo/radarr-4k-logo.css?sha=a0b4c15b85b52caef7289a23af6c8886b86de4e0"
+            "https://testing.theme-park.dev/CSS/addons/radarr/radarr-4k-logo/radarr-4k-logo.css?sha=d16f328462ba60ca8b4eb45c2cdaab8427fcff28"
           ]
         }
       }
@@ -241,7 +241,7 @@
       "addons": {
         "sonarr-4k-logo": {
           "css": [
-            "https://testing.theme-park.dev/CSS/addons/sonarr/sonarr-4k-logo/sonarr-4k-logo.css?sha=06171da345d389fc54c4cdb9656797fb61372ea9"
+            "https://testing.theme-park.dev/CSS/addons/sonarr/sonarr-4k-logo/sonarr-4k-logo.css?sha=c959d032bffaf076d2a905d59cce4eaf4970a71e"
           ]
         }
       }
@@ -283,7 +283,7 @@
     "bazarr": {
       "bazarr-4k-logo": {
         "css": [
-          "https://testing.theme-park.dev/CSS/addons/bazarr/bazarr-4k-logo/bazarr-4k-logo.css?sha=f22f1d36d3fbcd79d8f8adce7695eabf3f6ae86a"
+          "https://testing.theme-park.dev/CSS/addons/bazarr/bazarr-4k-logo/bazarr-4k-logo.css?sha=6c741d7f067a53b418200965e9ff941671ed8aeb"
         ]
       }
     },
@@ -336,14 +336,14 @@
     "radarr": {
       "radarr-4k-logo": {
         "css": [
-          "https://testing.theme-park.dev/CSS/addons/radarr/radarr-4k-logo/radarr-4k-logo.css?sha=a0b4c15b85b52caef7289a23af6c8886b86de4e0"
+          "https://testing.theme-park.dev/CSS/addons/radarr/radarr-4k-logo/radarr-4k-logo.css?sha=d16f328462ba60ca8b4eb45c2cdaab8427fcff28"
         ]
       }
     },
     "sonarr": {
       "sonarr-4k-logo": {
         "css": [
-          "https://testing.theme-park.dev/CSS/addons/sonarr/sonarr-4k-logo/sonarr-4k-logo.css?sha=06171da345d389fc54c4cdb9656797fb61372ea9"
+          "https://testing.theme-park.dev/CSS/addons/sonarr/sonarr-4k-logo/sonarr-4k-logo.css?sha=c959d032bffaf076d2a905d59cce4eaf4970a71e"
         ]
       }
     }
