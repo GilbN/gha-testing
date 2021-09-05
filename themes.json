@@ -34,7 +34,7 @@
         "glass": {
           "css": [
             "https://testing.theme-park.dev/CSS/addons/organizr/glass/glass-login.css?sha=6956da1b67d97689c1dc9ed43c306b4229082739",
-            "https://testing.theme-park.dev/CSS/addons/organizr/glass/glass-base.css?sha=6f3928f5de0bc6b3881c6a98c86a876ba0c03824"
+            "https://testing.theme-park.dev/CSS/addons/organizr/glass/glass-base.css?sha=b2404786f4e88d3f977a3afd9ea62889d653b625"
           ]
         }
       }
@@ -276,7 +276,7 @@
       "glass": {
         "css": [
           "https://testing.theme-park.dev/CSS/addons/organizr/glass/glass-login.css?sha=6956da1b67d97689c1dc9ed43c306b4229082739",
-          "https://testing.theme-park.dev/CSS/addons/organizr/glass/glass-base.css?sha=6f3928f5de0bc6b3881c6a98c86a876ba0c03824"
+          "https://testing.theme-park.dev/CSS/addons/organizr/glass/glass-base.css?sha=b2404786f4e88d3f977a3afd9ea62889d653b625"
         ]
       }
     },
