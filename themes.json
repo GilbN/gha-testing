@@ -217,7 +217,7 @@
       "addons": {}
     },
     "deluge": {
-      "base_css": "https://testing.theme-park.dev/CSS/themes/deluge/deluge-base.css?sha=414f0c5ea9cb24604d70a6fcab6a24e8109cc356",
+      "base_css": "https://testing.theme-park.dev/CSS/themes/deluge/deluge-base.css?sha=414f0c5ea9cb24604d70a6fcab6aasd24e8109cc356",
       "addons": {}
     },
     "bitwarden": {
