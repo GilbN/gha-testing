@@ -9,7 +9,7 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/gilbn/theme.park.svg?color=009688&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=pulls&logo=docker)](https://hub.docker.com/r/gilbn/theme.park)
 [![Blog](https://img.shields.io/static/v1.svg?color=009688&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=technicalramblings&message=Blog)](https://technicalramblings.com/ "A blog with different guides :)")
 
-<p align="center">A collection of themes/skins for your favorite apps!asdasd</p>
+<p align="center">A collection of themes/skins for youdddr favoassdasdasdrite apps!assssdasssssd</p>
 <div align="center">
     <a href="https://docs.theme-park.dev/site_assets/sonarr/aquamarine.png" rel="noopener"><img src="https://docs.theme-park.dev/site_assets/sonarr/aquamarine.png" alt="Screen Shot 1" width="49.15%" /></a>
     <a href="https://docs.theme-park.dev/site_assets/radarr/organizr-dark.png" rel="noopener"><img src="https://docs.theme-park.dev/site_assets/radarr/organizr-dark.png" alt="Screen Shot 2" width="49.15%" /></a>
@@ -19,7 +19,7 @@
 
 <h1><a href="https://docs.theme-park.dev/themes/">Themes</a></h1>
 
-<p align="center">Click on the banners for screenshots.</p>
+<p align="center">Click on the banners for screenasdasdshots.</p>
 
 <a href="https://docs.theme-park.dev/colors/organizr-dark"><img src="https://docs.theme-park.dev/site_assets/organizrdark_banner.png" alt="Organizr-Dark"/></a>
 <a href="https://docs.theme-park.dev/colors/aquamarine"><img src="https://docs.theme-park.dev/site_assets/aquamarine_banner.png" alt="Aquamarine"/></a>
