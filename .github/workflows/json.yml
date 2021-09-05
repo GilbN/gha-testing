@@ -27,14 +27,12 @@ jobs:
           python themes.py
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add .
-          git commit -m "themes.json"
-          git fetch &> /dev/null
-          diffs=$(git diff main origin/main)
-          if [ -z "$diffs" ]
-          then
+          status=$(git status --porcelain=v1 2>/dev/null | wc -l)
+          if [ "$status" -eq "1" ]; then
             echo "No Change to themes.json"
           else
+            git add .
+            git commit -m "themes.json"
             git push
           fi
       - name: Minify CSS
