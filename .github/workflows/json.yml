@@ -29,7 +29,14 @@ jobs:
           git config user.email github-actions@github.com
           git add .
           git commit -m "themes.json"
-          git push
+          git fetch &> /dev/null
+          diffs=$(git diff main origin/main)
+          if [ -z "$diffs" ]
+          then
+            echo "No Change to themes.json"
+          else
+            git push
+          fi
       - name: Minify CSS
         run: |
           sudo npm install -g minify
