@@ -2,7 +2,7 @@ name: semtest
 on:
   push:
     branches:
-      - main
+      - mains
 
 jobs:
   semver:
