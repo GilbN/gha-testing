@@ -19,7 +19,7 @@
 
 <h1><a href="https://docs.theme-park.dev/themes/">Themes</a></h1>
 
-<p align="center">Click on the banners for screenshots.</p>
+<p align="center">Click on the banners for screenasdasdshots.</p>
 
 <a href="https://docs.theme-park.dev/colors/organizr-dark"><img src="https://docs.theme-park.dev/site_assets/organizrdark_banner.png" alt="Organizr-Dark"/></a>
 <a href="https://docs.theme-park.dev/colors/aquamarine"><img src="https://docs.theme-park.dev/site_assets/aquamarine_banner.png" alt="Aquamarine"/></a>
