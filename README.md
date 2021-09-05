@@ -1,4 +1,4 @@
-<img src="banners/tp_banner.png"/>
+<img src="banners/tp_banner.png"/> dfdd
 
 [![Docs](https://img.shields.io/static/v1.svg?color=009688&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=theme-park.dev&message=Docs)](https://docs.theme-park.dev "Documentation for all the themes in this repository.")
 [![Discord](https://img.shields.io/discord/591352397830553601.svg?color=009688&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=Discord&logo=discord)](https://discord.gg/HM5uUKU "Discord for theme installation support")
@@ -9,7 +9,7 @@
 [![Docker Pulls](https://img.shields.io/docker/pulls/gilbn/theme.park.svg?color=009688&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=pulls&logo=docker)](https://hub.docker.com/r/gilbn/theme.park)
 [![Blog](https://img.shields.io/static/v1.svg?color=009688&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=technicalramblings&message=Blog)](https://technicalramblings.com/ "A blog with different guides :)")
 
-<p align="center">A collection of themes/skins for your favorite apps!</p>
+<p align="center">A collection of themes/skins for your favorite apps!asdasd</p>
 <div align="center">
     <a href="https://docs.theme-park.dev/site_assets/sonarr/aquamarine.png" rel="noopener"><img src="https://docs.theme-park.dev/site_assets/sonarr/aquamarine.png" alt="Screen Shot 1" width="49.15%" /></a>
     <a href="https://docs.theme-park.dev/site_assets/radarr/organizr-dark.png" rel="noopener"><img src="https://docs.theme-park.dev/site_assets/radarr/organizr-dark.png" alt="Screen Shot 2" width="49.15%" /></a>
